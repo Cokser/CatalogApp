@@ -1,0 +1,14 @@
+.header-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 119px;
+}
+.logo {
+  background-image: url("app.images/logo.png");
+  width: 200px;
+  height: 66px;
+}

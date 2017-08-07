@@ -1,0 +1,38 @@
+<main class="main-block">
+  <div class="filters-container">
+    <section class="filters-block">
+      <div class="filters">
+        <div class="filters-checkboxes">
+          <div class="filter">
+            <input type="checkbox" [(ngModel)]="showMen" id="sex-men" class="gallery-filter">
+            <label for="sex-men" class="filter-label">men</label>
+          </div>
+          <div class="filter">
+            <input type="checkbox" [(ngModel)]="showWomen" id="sex-women" class="gallery-filter">
+            <label for="sex-women" class="filter-label">women</label>
+          </div>
+          <div class="filter">
+            <input type="checkbox" [(ngModel)]="showChildren" id="children" class="gallery-filter">
+            <label for="children" class="filter-label">children</label>
+          </div>
+        </div>
+        <button class="filter-all" (click)="showAll()">see all products</button>
+      </div>
+    </section>
+  </div>
+  <div class="sort-wrapper">
+    <div class="sort-container">
+      <label for="sort-gallery" class="sort-label">sort by</label>
+      <select name="sort" [(ngModel)]="sortTitle" (change)="changeSort(sortTitle)" id="sort-gallery" class="sort">
+        <option value="price" class="sort-option">price</option>
+        <option value="type" class="sort-option">name</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="showMen" class="gallery-wrapper">
+    <gallery [sexFilter]="menFilter" ></gallery>
+  </div>
+  <div *ngIf="showWomen" class="gallery-wrapper">
+    <gallery [sexFilter]="womenFilter"></gallery>
+  </div>
+</main>
