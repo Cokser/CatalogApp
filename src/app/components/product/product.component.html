@@ -22,7 +22,7 @@
             <p class="product-value">{{ product.price + '.00€'}}</p>
             <p class="product-key">price</p>
           </div>
-          <div class="info-block">
+          <div *ngIf="product.colors" class="info-block">
             <div class="product-colors">
               <div *ngFor="let color of product.colors" class="product-color {{ 'color-' + color }}"></div>
             </div>

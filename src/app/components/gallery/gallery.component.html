@@ -16,12 +16,15 @@
     <article *ngFor="let product of ( products | filter: sexFilter )" class="products">
       <figure  class="product">
         <div class="product-header">
-          <div class="product-sizes">
+          <div *ngIf="product.sizes.length > 1; else showBasic" class="product-sizes">
             <label class="size-title" for="{{ 'size-for-' + product.id }}">sizes</label>
             <select id="{{ 'size-for-' + product.id }}" class="sizes">
-              <option class="product-size" *ngFor="let size of product.sizes">{{ size }}</option>
+              <option  class="product-size" *ngFor="let size of product.sizes">{{ size }}</option>
             </select>
           </div>
+          <ng-template #showBasic class="info-block">
+            <p class="product-value">{{ product.sizes }}</p>
+          </ng-template>
           <div class="product-colors">
             <div *ngFor="let color of product.colors" class="product-color {{ 'color-' + color }}"></div>
           </div>
