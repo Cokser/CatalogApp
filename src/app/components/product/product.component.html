@@ -1,0 +1,39 @@
+<div class="detail-container">
+  <div class="detail-wrapper">
+    <div class="detail-header">
+      <div (click)="gotoGallery()" class="catalog-link">
+        <p class="arrow"> < </p>
+        <p class="back-link">back to catalog</p>
+      </div>
+    </div>
+  </div>
+  <div class="title-info">
+    <div class="detail-title">{{product.type}}</div>
+    <div class="paragraph"></div>
+  </div>
+  <figure class="product">
+    <div class="product-wrapper">
+      <div class="product-img-container">
+        <img class="product-img" src="{{'assets/images/t-shirt-1-bg.png' }}" alt="{{product.type}}"> <!-- Здесь я вместо product.big, поставил прямое имя картинки, чтобы не искать новые-->
+      </div>
+      <section class="product-info">
+        <div class="product-header">
+          <div class="info-block">
+            <p class="product-value">{{ product.price + '.00€'}}</p>
+            <p class="product-key">price</p>
+          </div>
+          <div class="info-block">
+            <div class="product-colors">
+              <div *ngFor="let color of product.colors" class="product-color {{ 'color-' + color }}"></div>
+            </div>
+            <p class="product-key">colors</p>
+          </div>
+          <div class="info-block">
+            <p class="product-value">{{ product.sizes.slice(',') }}</p>
+            <p class="product-key">sizes</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </figure>
+</div>

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fronDevTest.iml" filepath="$PROJECT_DIR$/.idea/fronDevTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/project.local.iml" filepath="$PROJECT_DIR$/.idea/project.local.iml" />
     </modules>
   </component>
 </project>
