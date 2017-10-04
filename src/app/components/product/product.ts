@@ -3,7 +3,7 @@ export class Product {
   price: string;
   sizes: any;
   sex: string;
-  colors: any;
+  colors?: any;
   type: string;
   img: string;
   big: string;

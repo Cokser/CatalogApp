@@ -1,11 +1,12 @@
 {
-  "name": "front-dev-app",
+  "name": "catalog-app",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 10.10.0.2 --port 5300",
     "build": "ng build",
+    "build-gh": "ng build --prod --base-href https://cokser.github.io/CatalogApp/dist/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

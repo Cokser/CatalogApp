@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { CatalogService } from "./services/catalog.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  title = 'Catalog App';
+
+  productsArray: any;
+
+  constructor(private catalogService: CatalogService) { }
+
+  ngOnInit(){
+
+    this.catalogService.getProducts().subscribe(
+      array => this.productsArray = array);
+  }
+
 }

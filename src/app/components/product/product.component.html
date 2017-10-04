@@ -1,4 +1,4 @@
-<div class="detail-container">
+<div *ngIf="currentProduct" class="detail-container">
   <div class="detail-wrapper">
     <div class="detail-header">
       <div (click)="gotoGallery()" class="catalog-link">
@@ -8,28 +8,28 @@
     </div>
   </div>
   <div class="title-info">
-    <div class="detail-title">{{product.type}}</div>
+    <div class="detail-title">{{currentProduct.type}}</div>
     <div class="paragraph"></div>
   </div>
   <figure class="product">
     <div class="product-wrapper">
       <div class="product-img-container">
-        <img class="product-img" src="{{'assets/images/t-shirt-1-bg.png' }}" alt="{{product.type}}"> <!-- Здесь я вместо product.big, поставил прямое имя картинки, чтобы не искать новые-->
+        <img class="product-img" src="{{'assets/images/t-shirt-1-bg.png' }}" alt="{{currentProduct.type}}"> <!-- Здесь я вместо product.big, поставил прямое имя картинки, чтобы не искать новые-->
       </div>
       <section class="product-info">
         <div class="product-header">
           <div class="info-block">
-            <p class="product-value">{{ product.price + '.00€'}}</p>
+            <p class="product-value">{{ currentProduct.price + '.00€'}}</p>
             <p class="product-key">price</p>
           </div>
-          <div *ngIf="product.colors" class="info-block">
+          <div *ngIf="currentProduct.colors" class="info-block">
             <div class="product-colors">
-              <div *ngFor="let color of product.colors" class="product-color {{ 'color-' + color }}"></div>
+              <div *ngFor="let color of currentProduct.colors" class="product-color {{ 'color-' + color }}"></div>
             </div>
             <p class="product-key">colors</p>
           </div>
           <div class="info-block">
-            <p class="product-value">{{ product.sizes.slice(',') }}</p>
+            <p class="product-value">{{ currentProduct.sizes.slice(',') }}</p>
             <p class="product-key">sizes</p>
           </div>
         </div>

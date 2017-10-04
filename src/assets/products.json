@@ -1,10 +1,11 @@
 {
   "data": [
+    { "id": 6, "big":"backpack-bg.png", "price": 60.00, "sizes": ["10litri"], "sex": "men", "type": "backpack", "img": "backpack-1.png" },
+    { "id": 7, "big":"t-shirt-1-bg.png", "price": 7.00, "sizes": ["m", "l", "xl"], "sex": "men", "colors": ["1d1d68", "ffe537", "535153"], "type": "t-shirt", "img": "t-shirt-1.png" },
     { "id": 1, "big":"t-shirt-1-bg.png", "price": 5.00, "sizes": ["l", "xl"], "sex": "men", "colors": ["155db9", "ffe537", "535153"], "type": "t-shirt", "img": "t-shirt-1.png" },
-    { "id": 2, "big":"t-shirt-2-bg.png", "price": 20.00, "sizes": ["l", "m", "s"], "sex": "women", "colors": ["d3a7ab", "ffffff"], "type": "t-shirt", "img": "t-shirt-2.png" },
     { "id": 3, "big":"giacket-1-bg.png", "price": 60.00, "sizes": ["l", "m", "s"], "sex": "women", "type": "giacket", "img": "giacket-1.png" },
+    { "id": 2, "big":"t-shirt-2-bg.png", "price": 20.00, "sizes": ["l", "m", "s"], "sex": "women", "colors": ["d3a7ab", "ffffff"], "type": "t-shirt", "img": "t-shirt-2.png" },
     { "id": 4, "big":"trening-shoes-bg.png", "price": 80.00, "sizes": ["37", "39"], "sex": "women", "type": "trening shoes", "img": "trening-shoes-1.png" },
-    { "id": 5, "big":"pants-forclaz-bg.png", "price": 30.00, "sizes": ["l", "m", "s"], "sex": "men", "type": "pants forclaz", "img": "pants-forclaz-1.png" },
-    { "id": 6, "big":"backpack-bg.png", "price": 60.00, "sizes": ["10litri"], "sex": "men", "type": "backpack", "img": "backpack-1.png" }
+    { "id": 5, "big":"pants-forclaz-bg.png", "price": 30.00, "sizes": ["l", "m", "s"], "sex": "men", "type": "pants forclaz", "img": "pants-forclaz-1.png" }
   ]
 }

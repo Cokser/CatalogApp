@@ -5,21 +5,21 @@
   </div>
   <div class="{{ 'nav-' + sexFilter }}">
     <div class="product-nav">
-      <p class="product-page">{{ currentPage + '/' + products.length }}</p>
+      <p class="product-page">{{ currentPage + '/' + ceilFun(products.length / 3) }}</p>
       <div class="nav-buttons">
         <button (click)="setPage('minus')" class="nav-button"> < </button>
         <button (click)="setPage('plus')" class="nav-button"> > </button>
       </div>
     </div>
   </div>
-  <section class="gallery-block">
-    <article *ngFor="let product of ( products | filter: sexFilter )" class="products">
+  <section *ngIf="productsArray" class="gallery-block">
+    <article *ngFor="let product of productsArray[currentPage - 1]" class="products">
       <figure  class="product">
         <div class="product-header">
           <div *ngIf="product.sizes.length > 1; else showBasic" class="product-sizes">
             <label class="size-title" for="{{ 'size-for-' + product.id }}">sizes</label>
             <select id="{{ 'size-for-' + product.id }}" class="sizes">
-              <option  class="product-size" *ngFor="let size of product.sizes">{{ size }}</option>
+              <option class="product-size" *ngFor="let size of product.sizes">{{ size }}</option>
             </select>
           </div>
           <ng-template #showBasic class="info-block">

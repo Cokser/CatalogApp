@@ -1,5 +1,5 @@
-import {Component, QueryList, ViewChildren} from '@angular/core';
-import { GalleryComponent } from "../gallery/gallery.component"
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { GalleryComponent } from "../gallery/gallery.component";
 
 @Component({
   selector: 'catalog',
@@ -7,24 +7,31 @@ import { GalleryComponent } from "../gallery/gallery.component"
   styleUrls: ['./catalog.component.scss'],
   providers: [],
 })
+
 export class CatalogComponent {
-  sortTitle: string = "price";
-  showMen: boolean = false;
-  showWomen: boolean = false;
+
+  sortTitle: string = 'price';
+  showMen: boolean = true;
+  showWomen: boolean = true;
   showChildren: boolean = false;
-  menFilter: string = "men";
-  womenFilter: string = "women";
-  childrenFilter: string = "children";
+  menFilter: string = 'men';
+  womenFilter: string = 'women';
+  childrenFilter: string = 'children';
 
   @ViewChildren(GalleryComponent)
   gallerys: QueryList<GalleryComponent>;
 
   changeSort(target) {
+
     this.gallerys.forEach(x => x.showSort(target));
+
   }
+
   showAll() {
+
     this.showMen = true;
     this.showWomen = true;
     this.showChildren = true;
+
   }
 }

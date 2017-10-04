@@ -1,3 +1,20 @@
+
+$DesktopsLaptop: ( min: 1225px, max: 1399px );
+
+$Laptop: ( min: 1025px, max: 1224px );
+
+$Tablet: ( min: 769px, max: 1024px );
+
+$TabletMobile: ( min: 568px, max: 768px );
+
+$Mobile: ( min: 320px, max: 568px );
+
+@mixin device($device){
+  @media only screen and (min-width:map-get($device, min)) and (max-width:map-get($device, max)) {
+    @content;
+  }
+}
+
 .main-block {
   display: flex;
   flex-direction: column;
@@ -13,11 +30,6 @@
   background-color: #f5f6f7;
   width: 100%;
 }
-.filters-checkboxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .filters-block {
   display: flex;
   justify-content: center;
@@ -25,33 +37,49 @@
   position: relative;
   width: 1090px;
   height: 143px;
+  @include device($Laptop) {
+    width: 1000px;
+  }
+  @include device($Tablet) {
+    width: 769px;
+  }
+  @include device($TabletMobile) {
+    width: 568px;
+  }
+  @include device($Mobile) {
+    width: 320px;
+  }
 }
 .filters-checkboxes {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 402px;
-
+  @include device($TabletMobile) {
+    justify-content: space-around;
+  }
+  @include device($Mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 }
 .filter {
   display: flex;
   align-items: center;
-
 }
 .filters {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 52px;
+  height: 100%;
   width: 100%;
-
 }
 .gallery-filter {
   color: #aa9b77;
   width: 25px;
   height: 24px;
   margin-right: 17px;
-
 }
 .filter-label {
   text-transform: uppercase;
@@ -82,6 +110,18 @@
   position: relative;
   width: 1090px;
   height: 87px;
+  @include device($Laptop) {
+    width: 1000px;
+  }
+  @include device($Tablet) {
+    width: 769px;
+  }
+  @include device($TabletMobile) {
+    width: 568px;
+  }
+  @include device($Mobile) {
+    width: 320px;
+  }
 }
 .sort-container {
   display: flex;
@@ -102,7 +142,6 @@
   text-transform: uppercase;
   font-size: 20px;
   background: #f5f6f7;
-
 }
 .sort-option {
   text-transform: uppercase;

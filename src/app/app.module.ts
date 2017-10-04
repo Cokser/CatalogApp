@@ -7,17 +7,15 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { FilterPipe } from './components/gallery/filter.pipe';
 import { ProductComponent } from './components/product/product.component';
 import { routes } from "./app.routes";
-import { CatalogService } from "./components/catalog/catalog.service"
+import { CatalogService } from "./services/catalog.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     CatalogComponent,
     GalleryComponent,
-    FilterPipe,
     ProductComponent
   ],
   imports: [
