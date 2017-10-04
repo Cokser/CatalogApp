@@ -10,7 +10,6 @@
           <excludedPaths>
             <excludedPath path="/node_modules" />
             <excludedPath path="/frontDevApp/node_modules" />
-            <excludedPath path="/dist" />
           </excludedPaths>
         </serverdata>
       </paths>

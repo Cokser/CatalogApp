@@ -31,6 +31,8 @@ $Mobile: ( min: 320px, max: 568px );
   justify-content: space-between;
   position: relative;
   width: 100%;
+  margin: 10px 0 10px 0;
+
   @include device($Tablet) {
     width: 100%;
     justify-content: space-around;
@@ -165,22 +167,22 @@ $Mobile: ( min: 320px, max: 568px );
     background-color: #fff;
     color: #a99b77;
     font-size: 20px;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     @include device($Tablet) {
       font-size: 20px;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
     }
     @include device($TabletMobile) {
       font-size: 20px;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
     }
     @include device($Mobile) {
       font-size: 20px;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
     }
   }
 }
