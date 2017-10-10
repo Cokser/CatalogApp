@@ -16,9 +16,25 @@
             <label for="children" class="filter-label">children</label>
           </div>
         </div>
-        <button class="filter-all" (click)="showAll()">see all products</button>
+        <button class="catalog-btn" (click)="showAll()">see all products</button>
+        <button class="catalog-btn" >add product</button>
       </div>
     </section>
+  </div>
+  <div class="form-wrapper">
+    <form action="" method="post" class="product-form">
+      <label for="product-title" class="product-label">title
+        <input type="text" id="product-title">
+      </label>
+      <label for="product-price" class="product-label">price
+        <input type="text" id="product-price">
+      </label>
+      <select name="sex" class="product-sex">
+        <option value="men">men</option>
+        <option value="women">women</option>
+      </select>
+      <button type="submit" class="catalog-btn">submit</button>
+    </form>
   </div>
   <div class="sort-wrapper">
     <div class="sort-container">

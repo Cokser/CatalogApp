@@ -93,15 +93,36 @@ $Mobile: ( min: 320px, max: 568px );
     border: 3px solid blue;
   }
 }
-.filter-all {
+.catalog-btn {
   height: 52px;
-  width: 205px;
+  padding: 0 25px 0 25px;
   border-radius: 4px;
   background-color: #a99b77;
   font-size: 14px;
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+}
+.product-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1090px;
+  @include device($Laptop) {
+    width: 1000px;
+  }
+  @include device($Tablet) {
+    width: 769px;
+  }
+  @include device($TabletMobile) {
+    width: 568px;
+  }
+  @include device($Mobile) {
+    width: 320px;
+  }
+}
+.product-label {
+  border-bottom: 3px solid;
 }
 .sort-wrapper {
   display: flex;
